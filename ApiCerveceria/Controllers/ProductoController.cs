@@ -11,7 +11,6 @@ namespace ApiCerveceria.Controllers
     public class ProductoController : ControllerBase
     {
         private readonly IProductoServicio _productoServicio;
-        //Esto es un comentario
         public ProductoController(IProductoServicio productoServicio)
         {
             this._productoServicio = productoServicio;
@@ -25,9 +24,9 @@ namespace ApiCerveceria.Controllers
 
         // GET api/<ProductoController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public async Task<Producto> Get(int id)
         {
-            return "value";
+            return await this._productoServicio.GetProductosById(id);
         }
 
         // POST api/<ProductoController>

@@ -19,9 +19,9 @@ namespace ApiCerveceria.Services
             return await this._cerveceriaContext.Productos.ToListAsync();
         }
 
-        public Task<Producto> GetProductosById(int id)
+        public async Task<Producto> GetProductosById(int id)
         {
-            throw new NotImplementedException();
+            return await this._cerveceriaContext.Productos.FirstOrDefaultAsync(x => x.Id.Equals(id));
         }
     }
 }
