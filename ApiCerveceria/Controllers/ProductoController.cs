@@ -11,7 +11,7 @@ namespace ApiCerveceria.Controllers
     public class ProductoController : ControllerBase
     {
         private readonly IProductoServicio _productoServicio;
-
+        //Esto es un comentario
         public ProductoController(IProductoServicio productoServicio)
         {
             this._productoServicio = productoServicio;
