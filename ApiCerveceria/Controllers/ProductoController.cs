@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ApiCerveceria.Controllers
 {
-    //Este es un comentario de prueba 
     [Route("api/[controller]")]
     [ApiController]
     public class ProductoController : ControllerBase
